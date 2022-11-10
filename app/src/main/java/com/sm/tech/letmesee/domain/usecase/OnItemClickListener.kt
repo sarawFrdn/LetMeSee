@@ -1,7 +1,8 @@
 package com.sm.tech.letmesee.domain.usecase
 
-import com.sm.tech.letmesee.data.entity.LetMeSeeEntity
+import com.sm.tech.letmesee.domain.model.DataModel
+
 
 interface OnItemClickListener {
-    fun onItemClicked(item :LetMeSeeEntity)
+    fun onItemClicked(item :DataModel)
 }

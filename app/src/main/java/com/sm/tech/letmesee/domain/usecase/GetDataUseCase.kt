@@ -5,7 +5,7 @@ import com.sm.tech.letmesee.domain.model.DataModel
 
 class GetDataUseCase(var repository: LetMeSeeRepository) {
 
-    fun getNews(): List<DataModel> {
+    suspend fun getNews(): List<DataModel> {
         return repository.getListofData()
     }
 }

@@ -7,7 +7,7 @@ import com.sm.tech.letmesee.domain.model.DataModel
 
 
 class LetMeSeeNewsRepositoryImpl(): LetMeSeeRepository {
-    override fun getListofData(): List<DataModel> {
+    override suspend fun getListofData(): List<DataModel> {
 
         var items: List<LetMeSeeEntity> = ArrayList<LetMeSeeEntity>()
         return items.map{
