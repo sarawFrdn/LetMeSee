@@ -9,10 +9,7 @@ import retrofit2.http.Url
 
 
 interface LetMeSeeApiService{
-    @Headers(
-        "Ocp-Apim-Subscription-Key: 3be7b07a-4d08-4328-9426-333d842872f0",
-        "Accept:application/json"
-    )
-    @GET("v7.0/news/search?q=4a9e1e5034494a2e9fa9db5c6916e19b")
+
+    @GET("/v2/everything?q=apple&from=2022-11-08&to=2022-11-08&sortBy=popularity&apiKey=34534b86d45c4ddc8672670d4f7f7590")
       fun getSearch( ): Call<List<LetMeSeeEntity>>
 }
