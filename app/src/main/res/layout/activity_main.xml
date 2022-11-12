@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:background="@color/white"
+    android:background="@color/purple_200"
     tools:context=".presenter.MainActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -10,7 +10,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    -<androidx.appcompat.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
     android:background="#503C7E"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"

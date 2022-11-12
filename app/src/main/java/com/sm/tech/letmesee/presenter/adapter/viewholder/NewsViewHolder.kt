@@ -11,12 +11,14 @@ import com.sm.tech.letmesee.domain.usecase.OnItemClickListener
 class NewsViewHolder(view: View): RecyclerView.ViewHolder(view){
 
     private val textViewOne: TextView = view.findViewById(R.id.TextViewOne)
+    private val textViewTwo: TextView = view.findViewById(R.id.TextViewTwo)
     private val recyclerView: View = view.findViewById(R.id.card_view)
 
     fun bindText(news: Articles, clickListener: OnItemClickListener)
     {
         val itemNewss = news.title
         this.textViewOne.text = itemNewss.toString()
+        this.textViewTwo.text = news.author
 
         recyclerView.setOnClickListener {
             clickListener.onItemClicked(news)
