@@ -1,7 +1,7 @@
 package com.sm.tech.letmesee.di
 
-import com.sm.tech.letmesee.di.modules.LetMeSeeModule
+import com.sm.tech.letmesee.di.modules.letMeSeeModule
 
 object LetMeSeeInject {
-    fun provideDependency()= listOf(LetMeSeeModule)
+    fun provideDependency()= listOf(letMeSeeModule)
 }

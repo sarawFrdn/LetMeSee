@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.sm.tech.letmesee.R
-import com.sm.tech.letmesee.domain.model.DataModel
+import com.sm.tech.letmesee.data.entity.Articles
 import com.sm.tech.letmesee.domain.usecase.OnItemClickListener
 import com.sm.tech.letmesee.presenter.adapter.viewholder.NewsViewHolder
 
-class RecyclerViewListAdapter(private val allNews: List<DataModel>,
+class RecyclerViewListAdapter(
 private val itemClickListener: OnItemClickListener)
-    : ListAdapter<DataModel,NewsViewHolder>(DiffCallback()){
+    : ListAdapter<Articles,NewsViewHolder>(DiffCallback()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         return NewsViewHolder(
@@ -21,17 +21,19 @@ private val itemClickListener: OnItemClickListener)
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val itemNews = allNews[position]
-        holder.bindText(itemNews,itemClickListener)
+        getItem(position)?.let {
+            holder.bindText( it,itemClickListener)
+        }
+        
     }
 }
 
-class DiffCallback : DiffUtil.ItemCallback<DataModel>(){
-    override fun areItemsTheSame(oldItem: DataModel, newItem: DataModel): Boolean {
-        return oldItem.status == newItem.status
+class DiffCallback : DiffUtil.ItemCallback<Articles>(){
+    override fun areItemsTheSame(oldItem: Articles, newItem: Articles): Boolean {
+        return oldItem.title == newItem.title
     }
 
-    override fun areContentsTheSame(oldItem: DataModel, newItem: DataModel): Boolean {
+    override fun areContentsTheSame(oldItem: Articles, newItem: Articles): Boolean {
         return oldItem == newItem
     }
 }

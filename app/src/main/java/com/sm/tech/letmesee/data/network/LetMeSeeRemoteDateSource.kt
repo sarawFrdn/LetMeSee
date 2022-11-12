@@ -1,8 +1,10 @@
 package com.sm.tech.letmesee.data.network
 
+
 import com.sm.tech.letmesee.data.entity.LetMeSeeEntity
+import retrofit2.Response
 
 
 interface LetMeSeeRemoteDateSource {
-     fun getList(): List<LetMeSeeEntity>
+    suspend fun getSearch(): LetMeSeeEntity?
 }

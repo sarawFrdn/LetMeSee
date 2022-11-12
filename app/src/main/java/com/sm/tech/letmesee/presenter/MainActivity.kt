@@ -1,16 +1,15 @@
 package com.sm.tech.letmesee.presenter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sm.tech.letmesee.R
-import com.sm.tech.letmesee.data.network.LetMeSeeRemoteDataSourceImpl
-import com.sm.tech.letmesee.domain.model.DataModel
+import com.sm.tech.letmesee.data.entity.Articles
 import com.sm.tech.letmesee.domain.usecase.OnItemClickListener
 import com.sm.tech.letmesee.presenter.adapter.RecyclerViewListAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : AppCompatActivity(),OnItemClickListener {
     private val viewModel: NewsViewModel by viewModel()
@@ -29,15 +28,22 @@ class MainActivity : AppCompatActivity(),OnItemClickListener {
         linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
 
-
+        adapter = RecyclerViewListAdapter(this)
+        recyclerView.adapter= adapter
         viewModel.getNewsList()
         viewModel.newsLiveData.observe(this) {
-            adapter = RecyclerViewListAdapter(it,this)
-            recyclerView.adapter=adapter
+            it?.let {
+            adapter.submitList(it.articles)
+            }
         }
+
+       /* viewModel.newsLiveData.observe(this, Observer { data->
+
+            this.adapter=RecyclerViewListAdapter( ,this)
+            recyclerView.adapter =this.adapter })*/
     }
 
-    override fun onItemClicked(item: DataModel) {
+    override fun onItemClicked(item: Articles) {
         TODO("Not yet implemented")
     }
 }

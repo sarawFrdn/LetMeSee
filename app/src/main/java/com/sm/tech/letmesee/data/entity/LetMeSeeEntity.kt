@@ -7,22 +7,24 @@ import com.sm.tech.letmesee.domain.model.DataModel
 data class LetMeSeeEntity(
  var status       : String?             = null,
  var totalResults : Int?                = null,
- var articles     : ArrayList<Articles> = arrayListOf()
+ var articles     : ArrayList<Articles>? = arrayListOf()
 )
 {
     fun toModel()= DataModel(
-        status = status.orEmpty()
+        status = status.orEmpty(),
+        totalResults = totalResults,
+        articles = articles.orEmpty()
     )
 }
 
-
+@Keep
 data class Source (
 
   var id   : String? = null,
   var name : String? = null
 
 )
-
+@Keep
 data class Articles (
 
   var source      : Source? = Source(),

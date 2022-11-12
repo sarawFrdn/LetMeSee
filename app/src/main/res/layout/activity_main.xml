@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:background="#4F000000"
+    android:background="@color/white"
     tools:context=".presenter.MainActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"

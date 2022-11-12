@@ -1,17 +1,15 @@
 package com.sm.tech.letmesee.data
 
 import com.sm.tech.letmesee.data.entity.LetMeSeeEntity
+import com.sm.tech.letmesee.data.network.LetMeSeeRemoteDataSourceImpl
 import com.sm.tech.letmesee.data.network.LetMeSeeRemoteDateSource
 import com.sm.tech.letmesee.domain.LetMeSeeRepository
-import com.sm.tech.letmesee.domain.model.DataModel
+import retrofit2.Response
 
 
-class LetMeSeeNewsRepositoryImpl(): LetMeSeeRepository {
-    override suspend fun getListofData(): List<DataModel> {
+class LetMeSeeNewsRepositoryImpl(private var items: LetMeSeeRemoteDateSource): LetMeSeeRepository {
 
-        var items: List<LetMeSeeEntity> = ArrayList<LetMeSeeEntity>()
-        return items.map{
-            it.toModel()
-        }
+    override suspend fun getListofData(): LetMeSeeEntity? {
+        return items.getSearch()
     }
 }
