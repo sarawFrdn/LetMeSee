@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.ListAdapter
 import com.sm.tech.letmesee.R
 import com.sm.tech.letmesee.data.entity.Articles
 import com.sm.tech.letmesee.domain.usecase.OnItemClickListener
+import com.sm.tech.letmesee.presenter.ListFragment
 import com.sm.tech.letmesee.presenter.adapter.viewholder.NewsViewHolder
 
 class RecyclerViewListAdapter(
-private val itemClickListener: OnItemClickListener)
+private val itemClickListener: ListFragment
+)
     : ListAdapter<Articles,NewsViewHolder>(DiffCallback()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {

@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-
+    id 'kotlin-parcelize'
+    id  'androidx.navigation.safeargs'
 }
 
 android {
@@ -31,6 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding true
+    }
+
 }
 
 dependencies {
@@ -72,6 +77,15 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
 
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+
+
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    // ViewModel
+   /* implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0-alpha02")*/
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
 
     // Koin
 //    implementation "org.koin:koin-android:2.0.1"

@@ -11,12 +11,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <!-- <ImageView
-        android:layout_height="40dp"
-        android:layout_width="40dp"
-        android:background="@drawable/ic_baseline_location_city_24"
-        android:id="@+id/imageview"/>-->
-
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -34,7 +28,8 @@
         android:textColor="@color/black"
         android:text="@string/item1"
         android:layout_marginLeft="15dp"
-        android:layout_marginStart="10dp"/>
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comical"/>
 
         <TextView
             android:id="@+id/TextViewTwo"
