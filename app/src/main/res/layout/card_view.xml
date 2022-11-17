@@ -6,7 +6,7 @@
     app:cardElevation="6dp"
     android:backgroundTint="@color/white"
     android:layout_margin="10dp"
-    android:layout_height="120dp"
+    android:layout_height="130dp"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -29,6 +29,7 @@
         android:text="@string/item1"
         android:layout_marginLeft="15dp"
         android:layout_marginStart="10dp"
+        android:textAlignment="center"
         android:fontFamily="@font/comical"/>
 
         <TextView
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
             android:text="@string/item1"
             android:layout_gravity="start"
             android:textColor="@color/teal_700"

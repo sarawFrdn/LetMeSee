@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
+import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +29,7 @@ class ListFragment : Fragment(),OnItemClickListener {
 
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,9 +55,10 @@ class ListFragment : Fragment(),OnItemClickListener {
             }
         }
 
+        viewModel.getNewsList("all")
 
         binding?.submitBtn?.setOnClickListener {
-            viewModel.getNewsList(query = binding!!.searchView.text.toString())
+            viewModel.getNewsList(query = binding?.searchView?.text.toString())
         }
     }
 

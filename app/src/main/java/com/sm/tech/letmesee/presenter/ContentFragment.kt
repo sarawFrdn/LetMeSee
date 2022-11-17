@@ -1,4 +1,4 @@
-package com.sm.tech.letmesee
+package com.sm.tech.letmesee.presenter
 
 import android.content.Intent
 import android.net.Uri

@@ -5,15 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presenter.ListFragment"
-    android:background="@color/purple_200">
+    android:background="#EFEBE9">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#503C7E"
-            >
-
+            android:background="#FFAB91">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,9 +21,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="@string/LetMeSee"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:text = "@string/LetMeSee"
+                    android:textStyle="bold"
+                    android:textColor="#C96F53"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/crystal"/>
 
             </RelativeLayout>
 
@@ -51,9 +51,14 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/toolbar"
             android:layout_marginStart="20dp"
+            android:textColor="#191919"
+            android:backgroundTint="#FF8A50"
+            android:textColorHint="#FF8A50"
+            android:fontFamily="@font/tinybold"
             android:hint="@string/please_search_here"/>
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_baseline_search_24"
@@ -63,13 +68,25 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submitBtn"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit"
+            android:textStyle="italic"
+            android:backgroundTint="#FF8A50"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/toolbar"
+            android:fontFamily="@font/berry"
             />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progressTint="#FF5722"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
 
 
 </RelativeLayout>

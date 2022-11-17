@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/contentFragment"
-        android:name="com.sm.tech.letmesee.ContentFragment"
+        android:name="com.sm.tech.letmesee.presenter.ContentFragment"
         android:label="fragment_content"
         tools:layout="@layout/fragment_content" >
         <action
