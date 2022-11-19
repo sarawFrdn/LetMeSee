@@ -1,10 +1,10 @@
 package com.sm.tech.letmesee.presenter
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
@@ -60,10 +60,23 @@ class ListFragment : Fragment(),OnItemClickListener {
         binding?.submitBtn?.setOnClickListener {
             viewModel.getNewsList(query = binding?.searchView?.text.toString())
         }
+
+        binding?.toolbar?.inflateMenu(R.menu.menu)
+
+        binding?.toolbar?.setOnMenuItemClickListener {
+            when (it.itemId) {
+               R.id.about -> findNavController()
+                   .navigate(ListFragmentDirections.actionListFragmentToAboutFragment())
+            }
+            true
+
+        }
     }
+
 
     override fun onItemClicked(item: Articles) {
         findNavController().navigate(ListFragmentDirections.actionListFragmentToContentFragment(item))
     }
+
 
 }

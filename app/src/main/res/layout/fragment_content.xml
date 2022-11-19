@@ -20,7 +20,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/oxford"
+            android:fontFamily="@font/chomsky"
             android:text="@string/title"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -38,7 +38,7 @@
             android:textAlignment="textStart"
             android:textSize="18sp"
             android:layout_below="@id/title"
-            android:fontFamily="@font/tinybold" />
+            android:fontFamily="@font/pp" />
 
 
 
@@ -86,7 +86,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/oxford"
+                android:fontFamily="@font/pp"
                 android:text="@string/description"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -107,7 +107,7 @@
             android:textColor="#1A1A1B"
             android:backgroundTint="#FF5722"
             android:textSize="15sp"
-            android:fontFamily="@font/berry"/>
+            android:fontFamily="@font/pp"/>
 
     </RelativeLayout>
 

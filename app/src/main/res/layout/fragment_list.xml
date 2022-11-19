@@ -11,7 +11,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFAB91">
+            android:background="#FFAB91"
+          >
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                     android:textStyle="bold"
                     android:textColor="#C96F53"
                     android:textSize="32sp"
-                    android:fontFamily="@font/crystal"/>
+                    android:fontFamily="@font/chomsky"/>
 
             </RelativeLayout>
 
@@ -41,21 +42,21 @@
             />
 
 
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/searchView"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:queryHint="Search Here"
-            android:iconifiedByDefault="false"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/toolbar"
-            android:layout_marginStart="20dp"
-            android:textColor="#191919"
-            android:backgroundTint="#FF8A50"
-            android:textColorHint="#FF8A50"
-            android:fontFamily="@font/tinybold"
-            android:hint="@string/please_search_here"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#FF8A50"
+        android:fontFamily="@font/pp"
+        android:hint="@string/Search"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Here"
+        android:textColor="#191919"
+        android:textColorHint="#FF8A50"
+        android:textAlignment="center"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_marginTop="10dp"
@@ -76,7 +77,7 @@
             android:backgroundTint="#FF8A50"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/toolbar"
-            android:fontFamily="@font/berry"
+            android:fontFamily="@font/pp"
             />
 
     <ProgressBar

@@ -27,18 +27,14 @@
         android:textSize="18sp"
         android:textColor="@color/black"
         android:text="@string/item1"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="10dp"
         android:textAlignment="center"
-        android:fontFamily="@font/comical"/>
+        android:fontFamily="@font/pp"/>
 
         <TextView
             android:id="@+id/TextViewTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/item1"
             android:layout_gravity="start"
             android:textColor="@color/teal_700"
