@@ -28,6 +28,9 @@
         <argument
             android:name="data"
             app:argType="com.sm.tech.letmesee.data.entity.Articles" />
+        <action
+            android:id="@+id/action_contentFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -37,5 +40,21 @@
         <action
             android:id="@+id/action_aboutFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.sm.tech.letmesee.presenter.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <action
+            android:id="@+id/action_webViewFragment_to_contentFragment"
+            app:destination="@id/contentFragment" />
+        <argument
+            android:name="data"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

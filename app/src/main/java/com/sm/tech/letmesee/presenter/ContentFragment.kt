@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.sm.tech.letmesee.data.entity.Articles
 import com.sm.tech.letmesee.databinding.FragmentContentBinding
 import com.squareup.picasso.Picasso
@@ -47,9 +48,7 @@ class ContentFragment : Fragment() {
 
 
         binding?.fragmentDetailBtn?.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(articles.url)
-            startActivity(intent)
+            findNavController().navigate(ContentFragmentDirections.actionContentFragmentToWebViewFragment(articles.url))
         }
     }
 
