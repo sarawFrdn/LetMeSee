@@ -65,11 +65,9 @@ class ListFragment : Fragment(),OnItemClickListener {
 
         binding?.toolbar?.setOnMenuItemClickListener {
             when (it.itemId) {
-               R.id.about -> findNavController()
-                   .navigate(ListFragmentDirections.actionListFragmentToAboutFragment())
+               R.id.about -> findNavController().navigate(R.id.action_listFragment_to_aboutFragment)
             }
             true
-
         }
     }
 

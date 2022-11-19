@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutFragment"
-    android:background="#EAA6BD">
+    tools:context=".presenter.AboutFragment"
+    android:background="#FFEFEBE9">
 
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:text="@string/by_sarah_fereidounian_n_phone_number_98_09377898670"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/pp"
+            />
 
-   <androidx.appcompat.widget.AppCompatTextView
-       android:layout_width="wrap_content"
-       android:layout_height="130dp"
-       android:backgroundTint="@color/white"
-       android:textColor="@color/black"
-       android:text="@string/by_sarah_fereidounian_n_phone_number_98_09377898670"
-       android:textStyle="italic"
-       android:textSize="20sp"
-       android:layout_centerInParent="true"
-       android:fontFamily="@font/pp"
-       />
 
 
 </RelativeLayout>
-</FrameLayout>
